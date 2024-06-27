@@ -1,0 +1,23 @@
+# Alacritty configuration
+import = [
+# uncomment the flavour you want below:
+ #"~/.config/alacritty/catppuccin-latte.toml"
+# "~/.config/alacritty/catppuccin-frappe.toml"
+ #"~/.config/alacritty/catppuccin-macchiato.toml"
+ "~/.config/alacritty/catppuccin-mocha.toml"
+#"~/.config/alacritty/tokyonight_moon.toml",
+]
+[window]
+startup_mode = "Maximized"
+title = "Eugene Terminalius"
+[env]
+TERM = "xterm-256color"
+
+# Font configuration
+[font]
+normal = { family = "MesloLGS NF", style = "Regular" }
+bold = { family = "MesloLGS NF", style = "Bold" }
+italic = { family = "MesloLGS NF", style = "Italic" }
+bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+size = 12.0
+
