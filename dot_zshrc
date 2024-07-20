@@ -95,5 +95,10 @@ alias i='sudo pacman -Syu'
 alias ld='eza -lD'
 alias lf='eza -lf --color=always | grep -v /'
 alias u='sudo pacman -Suy && pamac update && flatpak update'
+fcd() {
+  cd "$(find . -type d | fzf)"
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(atuin init zsh)"
