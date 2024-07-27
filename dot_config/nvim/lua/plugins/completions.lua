@@ -35,34 +35,34 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 
-        -- `:` cmdline setup.
-        cmp.setup.cmdline(':', {
-          mapping = cmp.mapping.preset.cmdline(),
-          sources = cmp.config.sources({
-            { name = 'path' }
-          }, {
-            {
-              name = 'cmdline',
-              option = {
-                ignore_cmds = { 'Man', '!' }
-              }
-            }
-          })
-        }),
+				-- `:` cmdline setup.
+				cmp.setup.cmdline(':', {
+					mapping = cmp.mapping.preset.cmdline(),
+					sources = cmp.config.sources({
+						{ name = 'path' }
+					}, {
+						{
+							name = 'cmdline',
+							option = {
+								ignore_cmds = { 'Man', '!' }
+							}
+						}
+					})
+				}),
 
-            -- `/` cmdline setup.
-        cmp.setup.cmdline('/', {
-          mapping = cmp.mapping.preset.cmdline(),
-          sources = {
-            { name = 'buffer' }
-          }
-        }),
+				-- `/` cmdline setup.
+				cmp.setup.cmdline('/', {
+					mapping = cmp.mapping.preset.cmdline(),
+					sources = {
+						{ name = 'buffer' }
+					}
+				}),
 
-        require('cmp').setup({
-          sources = {
-            { name = 'buffer' },
-          },
-        }),
+				require('cmp').setup({
+					sources = {
+						{ name = 'buffer' },
+					},
+				}),
 
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
@@ -70,7 +70,7 @@ return {
 					{ name = "buffer" },
 					{ name = "path" },
 				}),
-      })
+			})
 		end,
 	},
 }

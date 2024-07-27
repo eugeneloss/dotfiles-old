@@ -12,13 +12,3 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    vim.cmd("highlight Normal ctermbg=none guibg=none")
-  end,
-})
-
-vim.cmd("colorscheme default")  -- Replace 'default' with your preferred colorscheme
-

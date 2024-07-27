@@ -13,6 +13,8 @@ return {
         ["<C-n>"] = { ":Neotree left <CR>", "NeoTree" },
         ["<Tab>"] = { ":bnext<CR>", "Next Buffer" },
         ["<S-Tab>"] = { ":bprev<CR>", "Previous Buffer" },
+        ["<C-d>"] = { "<C-d>M", "Scroll down" },
+        ["<C-u>"] = { "<C-u>M", "Scroll up" },
         K = { "Define Function" },
         ["<leader>"] = {
           z = { ":wqa <CR>", "Quit All" },

@@ -1,11 +1,10 @@
 return {
     {
-    "lukas-reineke/headlines.nvim",
-    opts = {
-      markdown = {
-        fat_headlines = true,
-      },
+        "lukas-reineke/headlines.nvim",
+        opts = {
+            markdown = {
+                fat_headlines = true,
+            },
+        },
     },
-  },
 }
-

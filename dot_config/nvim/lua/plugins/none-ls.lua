@@ -5,7 +5,8 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.shellharden,
-        null_ls.builtins.formatting.shfmt,
+				null_ls.builtins.formatting.shfmt,
+				null_ls.builtins.formatting.black,
 			},
 		})
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
