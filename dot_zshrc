@@ -73,7 +73,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-z fzf gh magic-enter colored-man-pages)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf gh magic-enter colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 export COLORTERM=truecolor
@@ -83,6 +83,7 @@ source <(fzf --zsh)
  else
    export EDITOR='nvim'
  fi
+eval "$(zoxide init --cmd cd zsh)"
 alias nv='nvim' 
 alias sp='sudo pacman' 
 alias chx='chmod +x' 
