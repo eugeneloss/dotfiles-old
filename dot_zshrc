@@ -4,6 +4,24 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+  0 # Function for 'cd' followed by 'eza'
+  1 function cdls() {
+  2     cd "$@" || return
+  3     eza --group-directories-first --icons=always
+  4 }
+  5 alias cd='cdls'
+  6
+  7 # Function for 'zoxide' followed by 'eza'
+  8 function zls() {
+  9     z "$@" || return
+ 10     eza --group-directories-first --icons=always
+ 11 }
+ 12 alias z='zls'
+ 13
+ 14 # Function to create a directory and change into it
+ 15 function mkcd() {
+ 16     mkdir -p "$1" && cd "$1"
+ 17 }
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
